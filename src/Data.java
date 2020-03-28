@@ -44,7 +44,7 @@ public class Data extends HttpServlet {
 	      //variavel que recebe idade:
 	      
 	      PrintWriter out = response.getWriter();
-	      out.println("Sua idade é de "+idade+" anos");
+	      out.println("Sua idade Ã© de "+idade+" anos");
 	   }
 
 	public static int calculaIdade(java.util.Date dataN) {
@@ -68,3 +68,5 @@ public class Data extends HttpServlet {
 	    return idade;
 	}
 }
+
+printf("hello World");
