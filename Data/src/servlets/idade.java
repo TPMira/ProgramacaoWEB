@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/data")
+@WebServlet("/idade")
 public class idade extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

@@ -21,44 +21,44 @@ public class data1 {
         this.ano = (short)ano;
     }
 
-    public int getdia() {
+    public int getDia() {
         return this.dia;
     }
 
     public void setdia(int dia) throws IllegalArgumentException {
         if (dia < 1 | dia > 31) {
-            throw new IllegalArgumentException("invalid date");
+            throw new IllegalArgumentException("data invalida");
         }
         this.dia = (byte)dia;
     }
 
-    public int getmes() {
+    public int getMes() {
         return this.mes;
     }
 
     public void setmes(int mes) throws IllegalArgumentException {
         if (mes < 1 || mes > 12) {
-            throw new IllegalArgumentException("invalid date");
+            throw new IllegalArgumentException("data invalida");
         }
-        if (Array.in(mes, this.mes30dias) && this.getdia() > 30) {
-            throw new IllegalArgumentException("invalid date");
+        if (Array.in(mes, this.mes30dias) && this.getDia() > 30) {
+            throw new IllegalArgumentException("data invalida");
         }
-        if (mes == 2 && this.getdia() > 29) {
-            throw new IllegalArgumentException("invalid date");
+        if (mes == 2 && this.getDia() > 29) {
+            throw new IllegalArgumentException("data invalida");
         }
-        if (!isLeapano(this.getano()) && this.getdia() > 28) {
-            throw new IllegalArgumentException("invalid date");
+        if (!isLeapano(this.getAno()) && this.getDia() > 28) {
+            throw new IllegalArgumentException("data invalida");
         }
         this.mes = (byte)mes;
     }
 
-    public int getano() {
+    public int getAno() {
         return this.ano;
     }
 
     public void setano(int ano) throws IllegalArgumentException{
         if (ano < 1) {
-            throw new IllegalArgumentException("invalid date");
+            throw new IllegalArgumentException("data invalida");
         }
         this.ano = (short) ano;
     }
@@ -68,6 +68,6 @@ public class data1 {
     }
 
     public String toString() {
-        return this.getdia() + "/" + this.getmes() + "/" + this.getano();
+        return this.getDia() + "/" + this.getMes() + "/" + this.getAno();
     }
 }
